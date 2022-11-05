@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: arial, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-image: url("nyc.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+
+.conditions {
+    background-color: rgb(155, 159, 190);
+    height: 23em;
+    width: 20em;
+    position: relative;
+    left: 3em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+.conditions .location {
+    display: flex;
+    flex-direction: column;
+}
+
+.conditions .others {
+    display: flex;
+    flex-direction: column;
+}
+
+.time {
+    color: rgb(218, 200, 200)
+}
+
+h1 {
+    color: rgb(221, 82, 51);
+}
+
+
+
+.jumbotron-fluid {
+    background-color: rgb(42, 78, 96);
+    text-align: center;
+    height: 10em;
+    position: flex;
+    margin-top: 0px;
+}
+
+.city-search {
+    position: relative;
+    left: 2em;
+}
+
+.weather-forecast {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+
+.searchVal {
+    border: solid;
+
+
+}
+
+#button {
+    border: solid;
+    color: rgb(9, 79, 46);
+}
+
+h4 {
+    padding: 1em
+}
+
+h5 {
+    position: relative;
+    left: 3em
+}
+
+#fiveday {
+    position: relative;
+    left: 1em;
+    color: rgb(25, 12, 12)
+}
+
+
+.container-sm {
+    align-self: center;
+    text-align: center;
+    background-color: rgb(180, 191, 209);
+    width: 25%;
+    position: relative;
+    left: 10em
+}
+
+#five-day-forecast {
+    position: relative;
+    left: 95em;
+    bottom: 90em
+}
+
+#weather-container {
+    position: relative;
+    bottom: 21em;
+    left: 16em
+}
+
+.card {
+    position: flex;
+    right: 1em;
+    top: 6em;
+}
+
+.weather-forecast {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid white;
+    border-radius: 8px;
+    background-color: rgb(135, 141, 187);
+    text-align: center;
+    position: relative;
+    left: 3em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid white;
+    border-radius: 8px;
+
+    background: rgb(126, 111, 111);
+    padding: 25px;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    color: white;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    position: relative;
+    left: 3em
+}
+
+
+
+/* styles for img size  */
+img {
+    width: 75px;
+    height: 75px;
+    position: relative;
+    right: 1em
+}
+
+@media only screen and(max-width: 1000px) {
+    .jumbotron-fluid {
+        background-color: rgb(117, 114, 139);
+        text-align: center;
+        height: 10em;
+        position: relative;
+        bottom: 0;
+        display: flex;
+        color: white;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .weather-forecast {
+        display: grid;
+        gap: 1rem;
+        grid-auto-flow: column;
+        padding: 1rem;
+        margin: 1rem;
+        border: 1px solid white;
+        border-radius: 8px;
+        background-color: rgb(135, 141, 187);
+        text-align: center;
+        position: relative;
+        left: 3em;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border: 1px solid white;
+        border-radius: 8px;
+
+        background: gray;
+        padding: 25px;
+        position: relative;
+        bottom: 0;
+        display: flex;
+        color: white;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    p {
+        position: relative;
+        left: 3em
+    }
+
+    h5 {
+        position: relative;
+        left: 3em
+    }
+
+    .conditions {
+        background-color: rgb(135, 141, 187);
+        height: 23em;
+        width: 20em;
+        position: relative;
+        left: 3em;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border: 1px solid white;
+        border-radius: 8px;
+    }
+
+    .conditions .location {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .conditions .others {
+        display: flex;
+        flex-direction: column;
+
+
+
+    }
+
+    .jumbotron-fluid {
+        background-color: rgb(117, 114, 139);
+        text-align: center;
+        height: 10em;
+        position: relative;
+        bottom: 0;
+        display: flex;
+        color: white;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .weather-forecast {
+        display: grid;
+        gap: 1rem;
+        justify-content: start;
+        align-items: none;
+        overflow-y: scroll;
+
+    }

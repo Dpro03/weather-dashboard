@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/adbd0f3127.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Weather-Dashboard</title>
+  </head>
+  <body>
+    <header class="jumbotron-fluid">
+      <h1>Weather Dashboard</h1>
+      <div class="time" id="time"></div>
+    </header>
+    <section class="city-search">
+      <form id="custom-search">
+        <div class="city-search"></div>
+        <label id="city-search">Search for a City</label><br />
+        <input
+          type="text"
+          class="searchVal"
+          id="searchVal"
+          placeholder="Enter City Name"
+          id="city"
+        />
+        <button id="button" type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </section>
+    <section>
+      <h4 id="Recent-cities">Recent Cities</h4>
+      <h5>Boston</h5>
+      <h5>New York</h5>
+      <h5>Kansas City</h5>
+      <h5>Orlando</h5>
+      <h5>Dallas</h5>
+      <h5>Seattle</h5>
+      <h5>Los Angeles</h5>
+    </section>
+
+    <div class="container-lg" id="weather-container">
+        <div class="current"></div>
+          <div class="conditions">
+            <h3>Current Weather</h3>
+            <h4 id="location">Location</h4>
+            <p id="icon" img class="wicon" src="icons/unknown.png" alt="Weather Icon"></p>
+            <p id="desc">description</p>
+            <p id="temp">temp</p>
+            <p id="wind">Wind-Speed</p>
+            <p id="humidity">Humidity</p>
+          </div>
+        </div>
+        <div class="container-sm">
+         <h3 class="text-center" id="fiveday">Five Day Forecast</h3>    
+        </div>
+        <div class="weather-forecast" id="forecast-cards">
+          <div class="day">mon</div>
+          <p id="icon1">icon<img class="wicon" src="icons/unknown.png" alt="Weather Icon"></p>
+          <p id="temp1">Temperature</p>
+          <p id="wind1">Wind-Speed</p>
+          <p id="humidity1">Humidity</p>
+        </div>
+        <div class="weather-forecast">
+          <div class="day">tue</div>
+          <p id="icon2">icon<img class="wicon" src="icons/unknown.png" alt="Weather Icon"></p>
+          <p id="temp2">Temperature</p>
+          <p id="wind2">Wind-Speed</p>
+          <p id="humidity2">Humidity</p>
+        </div>
+        <div class="weather-forecast">
+          <div class="day">wed</div>
+
+          <p id="icon3">icon<img class="wicon" src="icons/unknown.png" alt="Weather Icon"></p>
+          <p id="temp3">Temperature</p>
+          <p id="wind3">Wind-Speed</p>
+          <p id="humidity3">Humidity</p>
+        </div>
+        <div class="weather-forecast">
+          <div class="day">thur</div>
+
+          <p id="icon4">icon<img class="wicon" src="icons/unknown.png" alt="Weather Icon"></p>
+          <p id="temp4">Temperature</p>
+          <p id="wind4">Wind-Speed</p>
+          <p id="humidity4">Humidity</p>
+        </div>
+        <div class="weather-forecast">
+          <div class="day">fri</div>
+
+          <p id="icon5">icon<img class="wicon" src="icons/unknown.png" alt="Weather Icon"></p>
+          <p id="temp5">Temperature</p>
+          <p id="wind5">Wind-Speed</p>
+          <p id="humidity5">Humidity</p>
+        </div>
+      </div>
+
+      <script
+        src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+        crossorigin="anonymous"
+      ></script>
+      <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+      <script src="./assets/script.js"></script>
+    </body>
+  </html>
+    
+
+
+
