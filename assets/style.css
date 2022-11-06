@@ -12,50 +12,8 @@ body {
     height: 100vh;
 }
 
-body,
-html {
-    height: 100%;
-}
-
-
-.conditions {
-    background-color: rgb(155, 159, 190);
-    height: 23em;
-    width: 20em;
-    position: relative;
-    left: 3em;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border: 1px solid white;
-    border-radius: 8px;
-}
-
-.conditions .location {
-    display: flex;
-    flex-direction: column;
-}
-
-.conditions .others {
-    display: flex;
-    flex-direction: column;
-}
-
-.time {
-    color: rgb(218, 200, 200)
-}
-
 h1 {
     color: rgb(221, 82, 51);
-}
-
-
-
-.jumbotron-fluid {
-    background-color: rgb(42, 78, 96);
-    text-align: center;
-    height: 10em;
-    position: flex;
-    margin-top: 0px;
 }
 
 .city-search {
@@ -82,11 +40,6 @@ h1 {
 
 h4 {
     padding: 1em
-}
-
-h5 {
-    position: relative;
-    left: 3em
 }
 
 #fiveday {
@@ -125,8 +78,9 @@ h5 {
 
 .weather-forecast {
     display: grid;
+    column-count: 3;
     gap: 1rem;
-    grid-auto-flow: column;
+    grid-auto-flow: row;
     padding: 1rem;
     margin: 1rem;
     border: 1px solid white;
@@ -146,7 +100,7 @@ h5 {
     bottom: 0;
     display: flex;
     color: white;
-    width: 100%;
+    width: 25%;
     align-items: center;
     justify-content: center;
 }
@@ -166,104 +120,60 @@ img {
     right: 1em
 }
 
-@media only screen and(max-width: 1000px) {
-    .jumbotron-fluid {
-        background-color: rgb(117, 114, 139);
-        text-align: center;
-        height: 10em;
-        position: relative;
-        bottom: 0;
-        display: flex;
-        color: white;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
+.jumbotron-fluid {
+    background-color: rgb(117, 114, 139);
+    text-align: center;
+    height: 10em;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    color: white;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 
-    }
+}
 
-    .weather-forecast {
-        display: grid;
-        gap: 1rem;
-        grid-auto-flow: column;
-        padding: 1rem;
-        margin: 1rem;
-        border: 1px solid white;
-        border-radius: 8px;
-        background-color: rgb(135, 141, 187);
-        text-align: center;
-        position: relative;
-        left: 3em;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        border: 1px solid white;
-        border-radius: 8px;
+p {
+    position: relative;
+    left: 3em
+}
 
-        background: gray;
-        padding: 25px;
-        position: relative;
-        bottom: 0;
-        display: flex;
-        color: white;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
+h5 {
+    position: relative;
+    left: 3em
+}
 
-    }
+.conditions {
+    background-color: rgb(135, 141, 187);
+    height: 23em;
+    width: 20em;
+    position: relative;
+    left: 3em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid white;
+    border-radius: 8px;
+}
 
-    p {
-        position: relative;
-        left: 3em
-    }
+.conditions .location {
+    display: flex;
+    flex-direction: column;
+}
 
-    h5 {
-        position: relative;
-        left: 3em
-    }
+.conditions .others {
+    display: flex;
+    flex-direction: column;
+}
 
-    .conditions {
-        background-color: rgb(135, 141, 187);
-        height: 23em;
-        width: 20em;
-        position: relative;
-        left: 3em;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        border: 1px solid white;
-        border-radius: 8px;
-    }
-
-    .conditions .location {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .conditions .others {
-        display: flex;
-        flex-direction: column;
+.btn btn-info {
+    position: relative;
+    top: 5em;
+    right: 2em;
+}
 
 
 
-    }
 
-    .jumbotron-fluid {
-        background-color: rgb(117, 114, 139);
-        text-align: center;
-        height: 10em;
-        position: relative;
-        bottom: 0;
-        display: flex;
-        color: white;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
 
-    }
-
-    .weather-forecast {
-        display: grid;
-        gap: 1rem;
-        justify-content: start;
-        align-items: none;
-        overflow-y: scroll;
-
-    }

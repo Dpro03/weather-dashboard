@@ -143,5 +143,16 @@ function handleFormSubmit(event) {
   localStorage.setItem("city", event.target[0].value);
 }
 
-
-localStorage
+function viewHistory() {
+  var history = document.getElementById("history");
+  var historyArray = JSON.parse(localStorage.getItem("history")) || [];
+  for (var i = 0; i < historyArray.length; i++) {
+    var city = historyArray[i];
+    var cityButton = document.createElement("button");
+    cityButton.setAttribute("class", "btn btn-info");
+    cityButton.setAttribute("type", "button");
+    cityButton.setAttribute("data-city", city);
+    cityButton.textContent = city;
+    history.append(cityButton);
+  }
+}
