@@ -56,7 +56,7 @@ function createFiveDayCards(forecastArray) {
       forecastArray[1].weather[0].icon +
       ".png' alt='Icon depicting current weather.'>"
   );
-  $("#desc1").html("Currently: " + forecastArray[1].weather[0].description);
+  $("#desc1").html("Forecast: " + forecastArray[1].weather[0].description);
   $("#wind1").html("Wind-Speed: " + forecastArray[2].wind.speed + "MPH");
   $("#humidity1").html("Humidity: " + forecastArray[2].main.humidity + "%");
   $("#temp2").html("Temp: " + forecastArray[2].main.temp + "\u00B0F");
@@ -65,7 +65,7 @@ function createFiveDayCards(forecastArray) {
       forecastArray[2].weather[0].icon +
       ".png' alt='Icon depicting current weather.'>"
   );
-  $("#desc2").html("Currently: " + forecastArray[2].weather[0].description);
+  $("#desc2").html("Forecast: " + forecastArray[2].weather[0].description);
 
   $("#wind2").html("Wind-Speed: " + forecastArray[2].wind.speed + "MPH");
   $("#humidity2").html("Humidity: " + forecastArray[2].main.humidity + "%");
@@ -75,7 +75,7 @@ function createFiveDayCards(forecastArray) {
       forecastArray[3].weather[0].icon +
       ".png' alt='Icon depicting current weather.'>"
   );
-  $("#desc3").html("Currently: " + forecastArray[3].weather[0].description);
+  $("#desc3").html("Forecast: : " + forecastArray[3].weather[0].description);
 
   $("#wind3").html("Wind-Speed: " + forecastArray[3].wind.speed + "MPH");
   $("#humidity3").html("Humidity: " + forecastArray[3].main.humidity + "%");
@@ -85,7 +85,7 @@ function createFiveDayCards(forecastArray) {
       forecastArray[4].weather[0].icon +
       ".png' alt='Icon depicting current weather.'>"
   );
-  $("#desc4").html("Currently: " + forecastArray[4].weather[0].description);
+  $("#desc4").html("Forecast: : " + forecastArray[4].weather[0].description);
 
   $("#wind4").html("Wind-Speed: " + forecastArray[4].wind.speed + "MPH");
   $("#humidity4").html("Humidity: " + forecastArray[4].main.humidity + "%");
@@ -95,7 +95,7 @@ function createFiveDayCards(forecastArray) {
       forecastArray[5].weather[0].icon +
       ".png' alt='Icon depicting current weather.'>"
   );
-  $("#desc5").html("Currently: " + forecastArray[5].weather[0].description);
+  $("#desc5").html("Forecast: : " + forecastArray[5].weather[0].description);
 
   $("#wind5").html("Wind-Speed: " + forecastArray[5].wind.speed + "MPH");
   $("#humidity5").html("Humidity: " + forecastArray[5].main.humidity + "%");
