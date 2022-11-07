@@ -100,6 +100,14 @@ function createFiveDayCards(forecastArray) {
   $("#wind5").html("Wind-Speed: " + forecastArray[5].wind.speed + "MPH");
   $("#humidity5").html("Humidity: " + forecastArray[5].main.humidity + "%");
 }
+//add dayjs to forecast cards and get next
+//add dayjs to forecast cards
+$(".date").html(dayjs().format("MMMM D YYYY"));
+$(".date1").html(dayjs().add(1, "day").format("MMMM D YYYY"));
+$(".date2").html(dayjs().add(2, "day").format("MMMM D YYYY"));
+$(".date3").html(dayjs().add(3, "day").format("MMMM D YYYY"));
+$(".date4").html(dayjs().add(4, "day").format("MMMM D YYYY"));
+$(".date5").html(dayjs().add(5, "day").format("MMMM D YYYY"));
 
 function handleFormSubmit(event) {
   event.preventDefault();
