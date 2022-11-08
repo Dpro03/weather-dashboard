@@ -55,16 +55,22 @@ h4 {
     border: solid;
 }
 
-#five-day-forecast {
-    position: relative;
-    left: 95em;
-    bottom: 90em
+/*forcast-cards aligned in a row*/
+#forecast-cards {
+    display: inline-flex;
+    flex-direction: row;
+    border-color: rgb(237, 13, 125);
+    border-radius: 10px;
+    justify-content: space-around;
+
+
+
 }
 
 #weather-container {
     position: relative;
     bottom: 15em;
-    left: 22em;
+    left: 26em;
 
 }
 
@@ -77,13 +83,12 @@ h4 {
 /* getting text to fit in container */
 .forecast-container {
     position: relative;
-    left: 0em;
-    bottom: 12em;
-    width: 100%;
-    background-color: (180, 191, 209);
+    left: 8em;
+    bottom: 10em;
+    width: 85%;
+    height: 100%;
     border-radius: 10px;
-    border: solid;
-    margin: 1em;
+    border: solid, 20px, white;
 }
 
 .card-text {
@@ -126,7 +131,7 @@ h5 {
 }
 
 .conditions {
-    background-color: rgb(97, 108, 196);
+    background-color: rgb(213, 224, 239);
     height: 30em;
     width: 20em;
     position: relative;
@@ -136,4 +141,39 @@ h5 {
     border: 1px solid white;
     border-radius: 8px;
     text-align: center;
+
+}
+
+@media screen and (max-width:950px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .conditions {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+        {}
+
+    #forecast-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 80vw;
+    }
+
+    #five_days_weather {
+        width: 80vw;
+    }
+
+    .conditions {
+        display: flex;
+        flex-wrap: wrap;
+        flex-shrink: 0;
+    }
+
+
 }
