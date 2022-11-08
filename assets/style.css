@@ -45,13 +45,12 @@ h4 {
 
 
 .container-sm {
-    align-self: center;
-    text-align: center;
+
     background-color: rgb(180, 191, 209);
-    width: 25%;
+    width: 30%;
     position: relative;
-    left: 0em;
-    top: 0em;
+    left: em;
+    bottom: 14em;
     border-radius: 10px;
     border: solid;
 }
@@ -65,21 +64,21 @@ h4 {
 #weather-container {
     position: relative;
     bottom: 15em;
-    left: 16em;
+    left: 22em;
 
 }
 
 #time {
     align-items: center;
     position: relative;
-    left: 28em
+
 }
 
 /* getting text to fit in container */
 .forecast-container {
     position: relative;
     left: 0em;
-    bottom: 1em;
+    bottom: 12em;
     width: 100%;
     background-color: (180, 191, 209);
     border-radius: 10px;
