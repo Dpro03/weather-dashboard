@@ -21,16 +21,9 @@ h1 {
     left: 2em;
 }
 
-.weather-forecast {
-    font-size: 20px;
-    font-weight: 100;
-}
-
-
 .searchVal {
     border: solid;
-
-
+    border-color: rgb(88, 87, 86);
 }
 
 #button {
@@ -40,7 +33,8 @@ h1 {
 }
 
 h4 {
-    padding: 1em
+    padding: 0.3em;
+
 }
 
 #fiveday {
@@ -70,23 +64,8 @@ h4 {
 
 #weather-container {
     position: relative;
-    bottom: 20em;
+    bottom: 15em;
     left: 16em;
-
-}
-
-.card {
-    position: relative;
-    left: 0em;
-    bottom: 0em;
-    width: 20em;
-    height: 20em;
-    background-color: rgb(180, 191, 209);
-    border: solid;
-    border-radius: 10px;
-    margin: 1em;
-    padding: 1em;
-    text-align: center;
 
 }
 
@@ -96,50 +75,26 @@ h4 {
     left: 28em
 }
 
-
-
-.weather-forecast {
-    display: inline-flex;
-    gap: 1rem;
-    grid-auto-flow: row;
-    padding: 1rem;
-    margin: 1rem;
-    border: 1px solid white;
-    border-radius: 8px;
-    text-align: center;
+/* getting text to fit in container */
+.forecast-container {
     position: relative;
-    left: 15em;
-    flex-wrap: wrap;
-    border: 1px solid white;
-    border-radius: 8px;
-
-    background: rgb(123, 96, 96);
-    padding: 2px;
-    position: relative;
-    left: 12em;
-    bottom: 0em;
-    display: flex;
-    color: white;
-    width: 60%;
-    align-items: center;
-    justify-content: center;
+    left: 0em;
+    bottom: 1em;
+    width: 100%;
+    background-color: (180, 191, 209);
+    border-radius: 10px;
+    border: solid;
+    margin: 1em;
 }
 
-p {
-    position: relative;
-    bottom: 0;
-    display: flex;
-    color: white;
-    width: 25%;
-    justify-content: center;
+.card-text {
+    font-size: 16px;
+    font-weight: 100;
 }
-
-
 
 /* styles for img size  */
 img {
-    width: 100%;
-    height: 100%;
+    width: 50%;
     position: relative;
     right: 0em
 }
@@ -161,8 +116,9 @@ img {
 }
 
 p {
-    position: relative;
-    left: 3em
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
 }
 
 h5 {
@@ -172,7 +128,7 @@ h5 {
 
 .conditions {
     background-color: rgb(97, 108, 196);
-    height: 32em;
+    height: 30em;
     width: 20em;
     position: relative;
     left: 3em;
@@ -181,22 +137,4 @@ h5 {
     border: 1px solid white;
     border-radius: 8px;
     text-align: center;
-}
-
-
-
-.conditions .location {
-    display: flex;
-    flex-direction: column;
-}
-
-.conditions .others {
-    display: flex;
-    flex-direction: column;
-}
-
-.btn btn-info {
-    position: relative;
-    top: 5em;
-    right: 2em;
 }

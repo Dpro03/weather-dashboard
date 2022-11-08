@@ -105,7 +105,7 @@ form.addEventListener("submit", handleFormSubmit);
 
 //function to search api for five day forecast
 function getFiveDayApi(lat, lon) {
-  var baseUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=951288ed331fb8d9f59c36aaaba66bad&units=imperial`;
+  var baseUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=imperial&appid=951288ed331fb8d9f59c36aaaba66bad`;
   fetch(baseUrl)
     .then((response) => response.json())
     .then((data) => {
