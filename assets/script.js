@@ -133,18 +133,12 @@ function handleFormSubmit(event) {
   var form = document.getElementById("custom-search");
   form.addEventListener("submit", handleFormSubmit);
   localStorage.setItem("city", event.target[0].value);
+  console.log(localStorage);
 }
-
-//function viewHistory() {
-var history = document.getElementById("history");
-var historyArray = JSON.parse(localStorage.getItem("history")) || [];
-for (var i = 0; i < historyArray.length; i++) {
-  var city = historyArray[i];
-  var cityButton = document.createElement("button");
-  cityButton.setAttribute("class", "btn btn-info");
-  cityButton.setAttribute("type", "button");
-  cityButton.setAttribute("data-city", city);
-  cityButton.textContent = city;
-  history.append(cityButton);
+//get local storage
+var city = localStorage.getItem("city");
+if (city) {
+  searchApi(city);
 }
-//}
+//show a list of cities searched
+$("#list").html(localStorage.getItem("city"));
