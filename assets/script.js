@@ -142,3 +142,5 @@ if (city) {
 }
 //show a list of cities searched
 $("#list").html(localStorage.getItem("city"));
+//$("#list").html(localStorage.getItem("city.value"));
+
