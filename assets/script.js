@@ -12,16 +12,7 @@ var searchVal = document.querySelector(".searchVal");
 var city = $(".searchVal").val().trim();
 var locationIcon = document.querySelector("#icon");
 
-function searchApi(city) {
-  var baseUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=951288ed331fb8d9f59c36aaaba66bad&units=imperial`;
-  fetch(baseUrl)
-    .then((response) => response.json())
-    .then((data) => {
-      populateFirstCard(data);
-      getFiveDayApi(data.coord.lon, data.coord.lat);
-    });
-}
-
+//function to populate first card to page
 function populateFirstCard(data) {
   $("#location").html(data.name);
   $("#desc").html("Currently: " + data.weather[0].description);
@@ -34,15 +25,7 @@ function populateFirstCard(data) {
   $("#wind").html("Wind-Speed: " + data.wind.speed + "MPH");
   $("#humidity").html("Humidity: " + data.main.humidity + "%");
 }
-function getFiveDayApi(lat, lon) {
-  var baseUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=951288ed331fb8d9f59c36aaaba66bad&units=imperial`;
-  fetch(baseUrl)
-    .then((response) => response.json())
-    .then((data) => {
-      createFiveDayCards(data.list);
-    });
-}
-
+//function to populate 5 day forecast to page
 function createFiveDayCards(forecastArray) {
   console.log("five day cards");
   var fiveDayContent = document.getElementById("forecast-cards");
@@ -100,8 +83,7 @@ function createFiveDayCards(forecastArray) {
   $("#wind5").html("Wind-Speed: " + forecastArray[5].wind.speed + "MPH");
   $("#humidity5").html("Humidity: " + forecastArray[5].main.humidity + "%");
 }
-//add dayjs to forecast cards and get next
-//add dayjs to forecast cards
+//add dayjs to forecast cards to get current nd subsequent days
 $(".date").html(dayjs().format("MMMM D YYYY"));
 $(".date1").html(dayjs().add(1, "day").format("MMMM D YYYY"));
 $(".date2").html(dayjs().add(2, "day").format("MMMM D YYYY"));
@@ -120,7 +102,8 @@ function handleFormSubmit(event) {
 
 var form = document.getElementById("custom-search");
 form.addEventListener("submit", handleFormSubmit);
-//}
+
+//function to search api for five day forecast
 function getFiveDayApi(lat, lon) {
   var baseUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=951288ed331fb8d9f59c36aaaba66bad&units=imperial`;
   fetch(baseUrl)
@@ -129,6 +112,7 @@ function getFiveDayApi(lat, lon) {
       createFiveDayCards(data.list);
     });
 }
+//function to search api for current weather
 function searchApi(city) {
   var baseUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=951288ed331fb8d9f59c36aaaba66bad&units=imperial`;
   fetch(baseUrl)
@@ -151,16 +135,16 @@ function handleFormSubmit(event) {
   localStorage.setItem("city", event.target[0].value);
 }
 
-function viewHistory() {
-  var history = document.getElementById("history");
-  var historyArray = JSON.parse(localStorage.getItem("history")) || [];
-  for (var i = 0; i < historyArray.length; i++) {
-    var city = historyArray[i];
-    var cityButton = document.createElement("button");
-    cityButton.setAttribute("class", "btn btn-info");
-    cityButton.setAttribute("type", "button");
-    cityButton.setAttribute("data-city", city);
-    cityButton.textContent = city;
-    history.append(cityButton);
-  }
+//function viewHistory() {
+var history = document.getElementById("history");
+var historyArray = JSON.parse(localStorage.getItem("history")) || [];
+for (var i = 0; i < historyArray.length; i++) {
+  var city = historyArray[i];
+  var cityButton = document.createElement("button");
+  cityButton.setAttribute("class", "btn btn-info");
+  cityButton.setAttribute("type", "button");
+  cityButton.setAttribute("data-city", city);
+  cityButton.textContent = city;
+  history.append(cityButton);
 }
+//}
