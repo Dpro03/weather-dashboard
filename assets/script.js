@@ -33,6 +33,7 @@ function createFiveDayCards(forecastArray) {
   for (let i = 7; i < forecastArray.length; i += 8) {
     console.log(forecastArray[i]);
   }
+  //populate five day forecast cards
   $("#temp1").html("Temp: " + forecastArray[1].main.temp + "\u00B0F");
   $("#icon1").html(
     "<img src='http://openweathermap.org/img/w/" +
@@ -91,15 +92,6 @@ $(".date3").html(dayjs().add(3, "day").format("MMMM D YYYY"));
 $(".date4").html(dayjs().add(4, "day").format("MMMM D YYYY"));
 $(".date5").html(dayjs().add(5, "day").format("MMMM D YYYY"));
 
-function handleFormSubmit(event) {
-  event.preventDefault();
-  if (!event.target[0].value) {
-    alert("You must enter a city name!");
-    return;
-  }
-  searchApi(event.target[0].value);
-}
-
 var form = document.getElementById("custom-search");
 form.addEventListener("submit", handleFormSubmit);
 
@@ -143,4 +135,3 @@ if (city) {
 //show a list of cities searched
 $("#list").html(localStorage.getItem("city"));
 //$("#list").html(localStorage.getItem("city.value"));
-
