@@ -25,17 +25,18 @@
     <title>Weather-Dashboard</title>
   </head>
   <body>
+    <section>
    <div><header class="jumbotron-fluid">
       <h1 class="mb-3">Weather Dashboard</h1>
-
-     
      <p class="mb-3" id="time"></p>
+    </section>
 
     </header>
     
     <!-- Search Bar -->
-    <section class="city-search">
-      <form id="custom-search">
+    <section
+      class="city-search">
+       <form id="custom-search">
         <div class="city-search"></div>
         <label id="city-search">Search for a City</label><br/>
         <input
@@ -44,23 +45,15 @@
           id="searchVal"
           placeholder="Enter City Name"
           id="city"
-        />
+        /> 
         <button id="button" type="submit"><i class="fas fa-search"></i></button>
       </form>
-    </section>
-    <section>
+    
       <!-- list of cities previously searched -->
       <h4 id="Recent-cities">Recent Cities</h4>
-      <div id="list" class="content-box">
-        <h4>Recent Searches</h4></div>
-      <h5>Boston</h5>
-      <h5>New York</h5>
-      <h5>Kansas City</h5>
-      <h5>Orlando</h5>
-      <h5>Dallas</h5>
-      <h5>Seattle</h5>
-      <h5>Los Angeles</h5>
+      <div id="list" class="content-box"></div>
     </section>
+      
 
  <!-- Current Weather Conditions-->
     <div class="container -lg" id="weather-container">

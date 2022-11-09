@@ -49,7 +49,7 @@ h4 {
     width: 30%;
     position: relative;
     right: 1em;
-    bottom: 14em;
+    bottom: 6em;
     border-radius: 10px;
     border: solid;
     align-items: center;
@@ -86,7 +86,7 @@ h4 {
 .forecast-container {
     position: relative;
     left: 8em;
-    bottom: 10em;
+    bottom: 2em;
     width: 85%;
     height: 100%;
     border-radius: 10px;
@@ -137,6 +137,7 @@ h5 {
     height: 30em;
     width: 20em;
     position: relative;
+    top: 8em;
     left: 3em;
     display: inline-block;
     flex-wrap: wrap;
@@ -166,8 +167,6 @@ h5 {
         width: 80vw;
     }
 
-    
 
-    .container-sm {
 
-    }
+    .container-sm {}

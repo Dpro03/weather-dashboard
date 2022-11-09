@@ -96,7 +96,7 @@ var form = document.getElementById("custom-search");
 form.addEventListener("submit", handleFormSubmit);
 
 //function to search api for five day forecast
-function getFiveDayApi(lat, lon) {
+function getFiveDayApi(lon, lat) {
   var baseUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=imperial&appid=951288ed331fb8d9f59c36aaaba66bad`;
   fetch(baseUrl)
     .then((response) => response.json())
@@ -110,6 +110,7 @@ function searchApi(city) {
   fetch(baseUrl)
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       populateFirstCard(data);
       getFiveDayApi(data.coord.lon, data.coord.lat);
     });
@@ -121,17 +122,39 @@ function handleFormSubmit(event) {
     alert("You must enter a city name!");
     return;
   }
+  //sets local storage
   searchApi(event.target[0].value);
   var form = document.getElementById("custom-search");
   form.addEventListener("submit", handleFormSubmit);
-  localStorage.setItem("city", event.target[0].value);
+  saveCity(event.target[0].value);
   console.log(localStorage);
 }
-//get local storage
-var city = localStorage.getItem("city");
-if (city) {
-  searchApi(city);
+function saveCity(newCity) {
+  var cityArray = JSON.parse(localStorage.getItem("city")) || [];
+  if (cityArray.includes(newCity)) {
+    return;
+  }
+  cityArray.push(newCity);
+  if (cityArray.length > 5) {
+    cityArray.shift();
+  }
+  localStorage.setItem("city", JSON.stringify(cityArray));
+  renderCities();
 }
-//show a list of cities searched
-$("#list").html(localStorage.getItem("city"));
-//$("#list").html(localStorage.getItem("city.value"));
+
+function renderCities() {
+  var cityArray = JSON.parse(localStorage.getItem("city")) || [];
+  if (cityArray.length === 0) {
+    return;
+  }
+  $("#list").empty();
+  for (let i = 0; i < cityArray.length; i++) {
+    var button = document.createElement("button");
+    button.innerHTML = cityArray[i];
+    button.addEventListener("click", function () {
+      searchApi(cityArray[i]);
+    });
+    $("#list").append(button);
+  }
+}
+renderCities();
