@@ -6,7 +6,7 @@
 
 body {
     font-family: arial, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-image: url("nyc.webp");
+    background-image: url("/images/nyc.webp");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -48,7 +48,6 @@ h4 {
     background-color: rgb(180, 191, 209);
     width: 30%;
     position: relative;
-    right: 1em;
     bottom: 6em;
     border-radius: 10px;
     border: solid;
@@ -72,7 +71,7 @@ h4 {
 #weather-container {
     position: relative;
     bottom: 15em;
-    left: 26em;
+    left: 18em;
 
 }
 
@@ -145,6 +144,7 @@ h5 {
     border: 1px solid white;
     border-radius: 8px;
     text-align: center;
+    flex-shrink: inherit;
 
 }
 

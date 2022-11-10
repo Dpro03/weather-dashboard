@@ -33,4 +33,3 @@ Used Open Weathermap API for current weather conditions and five dsy forecast.
 https://dpro03.github.io/weather-dashboard/
 
 ## Screenshot of webpage
-
