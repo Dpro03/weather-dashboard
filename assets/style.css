@@ -6,7 +6,8 @@
 
 body {
     font-family: arial, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-image: url(.g/images/nyc.webp);
+    background-image: url(./images/nyc.webp);
+   
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
