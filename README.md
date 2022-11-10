@@ -1,8 +1,8 @@
-##Weather Dashboard
+## Weather Dashboard
 
 Users can search for a US city and receive current conditions and a five day forecast for that city on one page. Recents searches are saved underneath the search bar for easy subsequent access to commonly used places. The storage saves five prior searches, then, when a new search is made, the oldest search drops off.
 
-##Project Status
+## Project Status
 
 Submitted for evaluation.
 
@@ -12,7 +12,7 @@ AS A traveler
 I WANT to see the weather outlook for multiple cities
 SO THAT I can plan a trip accordingly
 
-##Acceptance Criteria
+## Acceptance Criteria
 
 GIVEN a weather dashboard with form inputs
 WHEN I search for a city
@@ -24,13 +24,13 @@ THEN I am presented with a 5-day forecast that displays the date, an icon repres
 WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 
-##Installation
+## Installation
 
 Used Open Weathermap API for current weather conditions and five dsy forecast.
 
-##Project Deployed at:
+## Project Deployed at:
 
 https://dpro03.github.io/weather-dashboard/
 
-##Screenshot of webpage
+## Screenshot of webpage
 
