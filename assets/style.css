@@ -6,7 +6,7 @@
 
 body {
     font-family: arial, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-image: url(../nyc.webp);
+    background-image: url(.g/images/nyc.webp);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -169,20 +169,5 @@ h5 {
 
 
 
-    .container-sm {
-        width: 80vw;
-        position: relative;
-        bottom: 0;
-        left: 0;
-        border-radius: 10px;
-        border: solid;
-        align-items: center;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        margin: 0 auto;
-    }
+
 }
