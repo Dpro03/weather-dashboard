@@ -60,7 +60,7 @@ h4 {
 #forecast-cards {
     display: inline-flex;
     flex-direction: row;
-    border-color: rgb(237, 13, 125);
+    border-color: rgb(176, 26, 101);
     border-radius: 10px;
     justify-content: center;
 
@@ -169,4 +169,20 @@ h5 {
 
 
 
-    .container-sm {}
+    .container-sm {
+        width: 80vw;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        border-radius: 10px;
+        border: solid;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+}
